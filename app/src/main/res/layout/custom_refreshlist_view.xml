@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="@dimen/list_desc_padding"
+    android:background="@color/white">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Title text njnjnjfls kugg iuggg ghghg kgiig "
-        android:id="@+id/textView"
+        android:text=""
+        android:id="@+id/textView_title"
         android:textColor="@color/list_title"
         android:textStyle="bold"
         android:layout_alignParentTop="true"
@@ -19,7 +21,7 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/textView_title"
         android:weightSum="1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
@@ -27,17 +29,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0.65"
+            android:layout_weight="0.75"
             android:padding="@dimen/list_desc_padding"
             android:textColor="@color/list_description"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Small Text bhkhghhghh jkhjhkjhjhj  kjhkjhkjhj kjhkjhkjh kjhkjhkh "
-            android:id="@+id/textView2" />
+            android:text=""
+            android:id="@+id/textView_desc" />
 
-        <ImageView
+        <com.android.volley.toolbox.NetworkImageView
             android:layout_width="150dp"
             android:layout_height="100dp"
-            android:layout_weight="0.35"
+            android:layout_weight="0.25"
             android:src="@drawable/default_image"
             android:contentDescription="@string/app_name"
             android:id="@+id/imageView" />
