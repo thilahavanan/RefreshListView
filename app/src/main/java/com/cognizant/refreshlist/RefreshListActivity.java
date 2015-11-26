@@ -3,6 +3,7 @@ package com.cognizant.refreshlist;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -28,6 +29,7 @@ public class RefreshListActivity extends AppCompatActivity {
     ListviewAdapter listviewAdapter;
 
     ListviewDataModel listviewDataModel;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,7 @@ public class RefreshListActivity extends AppCompatActivity {
         _getCountryDetails();
 
         listView = (ListView) findViewById(R.id.listView);
+        toolbar=(Toolbar)findViewById(R.id.toolbar);
 
         //Instantiate ListView Adapter
         listviewAdapter = new ListviewAdapter(RefreshListActivity.this, listviewDataModel);
@@ -87,7 +90,11 @@ public class RefreshListActivity extends AppCompatActivity {
                         listviewDataModel.setImageUrlList(url);
 
                     }
+
+                    //
                     refreshContainer.setRefreshing(false);
+                    listviewAdapter.notifyDataSetChanged();//Notify data set changed to refresh listview
+                    toolbar.setTitle(jsonObject.getString("title")); //Updating Actionbar title from response
 
                 } catch (JSONException exe) {
                     Log.e("PARSING EXE", exe.getMessage());
