@@ -8,16 +8,13 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
 
-/**
- * Created by Thamil on 11/26/2015.
- */
 public class AppController extends Application {
 
     private RequestQueue mRequestQueue;
     private ImageLoader mImageLoader;
 
     private static AppController appController;
-    private String TAG=AppController.class.getSimpleName();
+    private String TAG = AppController.class.getSimpleName();
 
     @Override
     public void onCreate() {

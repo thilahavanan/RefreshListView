@@ -22,6 +22,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
 public class RefreshListActivity extends AppCompatActivity {
     SwipeRefreshLayout refreshContainer;
 
@@ -40,7 +41,7 @@ public class RefreshListActivity extends AppCompatActivity {
         _getCountryDetails();
 
         listView = (ListView) findViewById(R.id.listView);
-        toolbar=(Toolbar)findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         //Instantiate ListView Adapter
         listviewAdapter = new ListviewAdapter(RefreshListActivity.this, listviewDataModel);

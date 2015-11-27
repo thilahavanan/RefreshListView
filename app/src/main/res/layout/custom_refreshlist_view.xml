@@ -1,49 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/list_desc_padding"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/list_desc_padding">
 
     <TextView
+        android:id="@+id/textView_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text=""
-        android:id="@+id/textView_title"
-        android:textColor="@color/list_title"
-        android:textStyle="bold"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/list_title"
+        android:textStyle="bold" />
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView_title"
-        android:weightSum="1"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView_title"
+        android:orientation="horizontal"
+        android:weightSum="1">
 
         <TextView
+            android:id="@+id/textView_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="@dimen/list_desc_padding"
-            android:textColor="@color/list_description"
-            android:textAppearance="?android:attr/textAppearanceSmall"
             android:text=""
-            android:id="@+id/textView_desc" />
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/list_description" />
 
         <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/imageView"
             android:layout_width="100dp"
-            android:layout_height="100dp"
 
-            android:scaleType="fitXY"
-            android:src="@drawable/default_image"
+            android:layout_height="100dp"
             android:contentDescription="@string/app_name"
-            android:id="@+id/imageView" />
+            android:scaleType="fitXY"
+            android:src="@drawable/default_image" />
 
 
     </LinearLayout>

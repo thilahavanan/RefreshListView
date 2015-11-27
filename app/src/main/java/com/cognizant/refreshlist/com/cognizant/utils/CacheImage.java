@@ -5,10 +5,7 @@ import android.support.v4.util.LruCache;
 
 import com.android.volley.toolbox.ImageLoader;
 
-/**
- * Created by Thamil on 11/26/2015.
- */
-public class CacheImage extends LruCache<String,Bitmap> implements ImageLoader.ImageCache {
+public class CacheImage extends LruCache<String, Bitmap> implements ImageLoader.ImageCache {
 
     public static int getDefaultLruCacheSize() {
         final int maxMemory = (int) (Runtime.getRuntime().maxMemory() / 1024);
